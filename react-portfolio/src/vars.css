@@ -1,0 +1,48 @@
+:root {
+  --font-primary: "Inter", system-ui, -apple-system, sans-serif;
+
+  /* base spacing & radius */
+  --radius: 8px;
+}
+
+/* ========= LIGHT THEME (Professional Minimal) ========= */
+[data-theme="light"] {
+  --bg: #f7f7f5;              /* soft off-white */
+  --surface: #ffffff;
+  --text: #1c1c1c;            /* soft black */
+  --muted-text: #555555;
+
+  --primary: #bfa181;         /* muted gold */
+  --secondary: #d4c5b0;       /* warm beige */
+  --accent: #4b5563;          /* neutral gray */
+  /* shared UI tokens */
+  --card-bg: var(--surface);
+  --card-border: var(--secondary);
+  --card-hover: var(--primary);
+  --card-shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* ========= DARK THEME (Elegant, Not Neon) ========= */
+[data-theme="dark"] {
+  --bg: #1c1c1c;
+  --surface: #242424;
+  --text: #f4f4f4;
+  --muted-text: #cfcfcf;
+
+  --primary: #bfa181;
+  --secondary: #3a3a3a;
+  --accent: #9ca3af;
+
+  /* shared UI tokens */
+  --card-bg: var(--surface);
+  --card-border: var(--secondary);
+  --card-hover: var(--primary); 
+  --card-shadow: rgba(130, 146, 193, 0.5);
+}
+
+/* smooth transition */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

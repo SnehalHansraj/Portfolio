@@ -1,0 +1,21 @@
+[
+  {
+    "role": "Software Engineer",
+    "organisation": "Persistent Systems Ltd., India",
+    "startDate": "June, 2022",
+    "endDate": "March, 2024",
+    "experiences": ["Worked on C#.Net Applications, web APIs", "Reduced load times by 50%"],
+    "imageSrc": "assets/history/persistent.png"
+  },
+  {
+    "role": "Software Intern",
+    "organisation": "Persistent Systems Ltd., India",
+    "startDate": "Jan, 2022",
+    "endDate": "Jun, 2022",
+    "experiences": [
+      "Worked on component library",
+      "Helped create UI components"
+    ],
+    "imageSrc": "assets/history/persistent.png"
+  }
+]

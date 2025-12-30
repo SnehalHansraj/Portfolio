@@ -1,0 +1,137 @@
+
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 120px;
+  position: relative;
+  font-family: "Inter", sans-serif;
+}
+
+.content {
+  max-width: 600px;
+}
+
+.title {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+
+.name {
+  color: #3b82f6; /* blue */
+}
+
+
+.subtitle {
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--muted-text); 
+  margin-bottom: 20px;
+}
+
+
+.description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--muted-text);
+  margin-bottom: 32px;
+  max-width: 520px;
+}
+
+.buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.contactBtn {
+  background-color: var(--primary);
+  color: var(--bg);
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.secondaryBtn {
+  border: 1px solid var(--accent);
+  color: var(--text);
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  background: transparent;
+}
+
+.heroImg{
+    /*width: 39%;*/
+    width: 360px;
+    height: 360px;
+    z-index: 1;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+    0% { transform: translate(0, 0px); }
+    50% { transform: translate(0, 10px); }
+    100% { transform: translate(0, -0px); }
+}
+
+
+/* Background blur stays but softer */
+.topBlur,
+.bottomBlur {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: -1;
+}
+
+.topBlur {
+  width: 40vw;
+  height: 40vw;
+  background: rgba(59, 130, 246, 0.3);
+  top: -100px;
+  left: -100px;
+}
+
+.bottomBlur {
+  width: 50vw;
+  height: 50vw;
+  background: rgba(37, 99, 235, 0.25);
+  bottom: -150px;
+  right: -150px;
+}
+
+/* Responsive styles */
+
+@media screen and (max-width: 900px) {
+  .container {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 60px 24px;
+  }
+
+  .content {
+    align-items: center;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  .heroImg {
+    width: 260px;
+    height: 260px;
+    margin-bottom: 32px;
+  }
+}
