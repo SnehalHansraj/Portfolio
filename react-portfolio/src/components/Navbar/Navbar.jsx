@@ -8,7 +8,7 @@ import { getImageUrl } from "../../utils";
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const { theme, toggleTheme } = useTheme();
+  const { toggleTheme } = useTheme();
   const { language, toggleLanguage } = useLanguage();
 
   return (

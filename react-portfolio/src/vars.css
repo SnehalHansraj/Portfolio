@@ -20,6 +20,7 @@
   --card-border: var(--secondary);
   --card-hover: var(--primary);
   --card-shadow: rgba(0, 0, 0, 0.1);
+  --accent-bg: rgba(191, 161, 129, 0.08);
 }
 
 /* ========= DARK THEME (Elegant, Not Neon) ========= */
@@ -37,7 +38,8 @@
   --card-bg: var(--surface);
   --card-border: var(--secondary);
   --card-hover: var(--primary); 
-  --card-shadow: rgba(130, 146, 193, 0.5);
+  --card-shadow: rgba(191, 195, 208, 0.5);
+  --accent-bg: transparent;
 }
 
 /* smooth transition */
