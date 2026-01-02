@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { useTheme } from "../../context/ThemeContext";
 import { useLanguage } from "../../context/LanguageContext";
 
+import { navbarText } from "../../i18n/text";
+
 import styles from "./Navbar.module.css";
 import { getImageUrl } from "../../utils";
 
@@ -10,6 +12,7 @@ export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const { toggleTheme } = useTheme();
   const { language, toggleLanguage } = useLanguage();
+  const t = navbarText[language];
 
   return (
     <nav className={styles.navbar}>
@@ -21,8 +24,8 @@ export const Navbar = () => {
           className={styles.menuBtn}
           src={
             menuOpen
-              ? getImageUrl("nav/closeIcon.png")
-              : getImageUrl("nav/menuIcon.png")
+              ? "./assets/nav/closeIcon.png"
+              : "./assets/nav/menuIcon.png"
           }
           alt="menu-button"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -32,16 +35,16 @@ export const Navbar = () => {
           onClick={() => setMenuOpen(false)}
         >
           <li>
-            <a href="#about">About</a>
+            <a href="#about">{t.about}</a>
           </li>
           <li>
-            <a href="#experience">Experience</a>
+            <a href="#experience">{t.experience}</a>
           </li>
           <li>
-            <a href="#projects">Projects</a>
+            <a href="#projects">{t.projects}</a>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <a href="#contact">{t.contact}</a>
           </li>
         </ul>
       </div>

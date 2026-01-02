@@ -1,3 +1,18 @@
+export const navbarText = {
+  en: {
+    about: "About",
+    experience: "Experience",
+    projects: "Projects",
+    contact: "Contact",
+  },
+  de: {
+    about: "Über mich",
+    experience: "Berufserfahrung",
+    projects: "Projekte",
+    contact: "Kontakt",
+  },
+};
+
 export const heroText = {
   en: {
     title: "Hi, I’m Snehal Hansraj",
@@ -11,4 +26,60 @@ export const heroText = {
     description:
       "Masterstudentin an der RPTU Kaiserslautern mit über 2 Jahren Industrieerfahrung als Software Engineer bei Persistent Systems."
   }
+};
+
+
+export const aboutText = {
+  en: {
+    title: "About Me",
+    summary:
+      "I am currently pursuing my Master’s degree in Computer Science at RPTU Kaiserslautern, Germany. I have over 2 years of professional experience as a Software Engineer at Persistent Systems, where I worked on backend development, APIs, and software optimization." +
+      " I am interested in software development, data analytics, and building practical solutions for real-world problems.",
+    summary2:
+      "I am currently looking for a Working Student (Werkstudent) position in Germany." +
+      "Software Engineer with 2+ years of professional experience in backend and full-stack development. Currently pursuing a Master’s degree in Computer Science at RPTU Kaiserslautern, with a strong focus on scalable systems, clean architecture, and applied software engineering.",
+    // alternative longer summary
+    education: "Education",
+    degrees: [
+      {
+        degree: "M.Sc. Computer Science",
+        university: "RPTU Kaiserslautern-Landau, Germany",
+        duration: "2024 – Present",
+      },
+      {
+        degree: "B.E. Computer Engineering",
+        university: "Savitribai Phule Pune University, India",
+        duration: "2018 – 2022",
+      },
+    ],
+  },
+  de: {
+    title: "Über mich",
+    summary:
+      "Ich studiere derzeit Informatik im Master an der RPTU Kaiserslautern in Deutschland. Ich habe mehr als 2 Jahre Berufserfahrung als Software Engineer bei Persistent Systems. Dort habe ich an Backend-Entwicklung, APIs und Software-Optimierung gearbeitet.",
+    summary2:
+        "Ich interessiere mich für Softwareentwicklung und Datenanalyse. Aktuell suche ich eine Werkstudentenstelle in Deutschland.",
+    education: "Ausbildung",
+    degrees: [
+      {
+        degree: "M.Sc. Informatik",
+        university: "RPTU Kaiserslautern-Landau, Deutschland",
+        duration: "2024 – Heute",
+      },
+      {
+        degree: "B.E. Computer Engineering",
+        university: "Savitribai Phule Pune University, Indien",
+        duration: "2018 – 2022",
+      },
+    ],
+  },
+};
+
+export const experienceText = {
+  en: {
+    title: "Experience",
+  },
+  de: {
+    title: "Berufserfahrung",
+  },
 };

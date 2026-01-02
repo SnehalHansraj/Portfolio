@@ -4,11 +4,16 @@ import styles from "./Experience.module.css";
 import skills from "../../data/skills.json";
 import history from "../../data/history.json";
 import { getImageUrl } from "../../utils";
+import { useLanguage } from "../../context/LanguageContext";
+import { experienceText } from "../../i18n/text";
 
 export const Experience = () => {
+  const { language } = useLanguage();
+  const t = experienceText[language];
+
   return (
     <section className={styles.container} id="experience">
-      <h2 className={styles.title}>Experience</h2>
+      <h2 className={styles.title}>{t.title}</h2>
       <div className={styles.content}>
         <div className={styles.skills}>
           {skills.map((skill, id) => {

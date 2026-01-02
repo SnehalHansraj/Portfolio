@@ -1,4 +1,33 @@
 [
+ 
+  {
+    "title": "C++",
+    "imageSrc": "assets/skills/cpp.png"
+  },
+  {
+    "title": "C#",
+    "imageSrc": "assets/skills/csharp.png"
+  },
+  {
+    "title": "Python",
+    "imageSrc": "assets/skills/python.png"
+  },
+  {
+    "title": "JavaScript",
+    "imageSrc": "assets/skills/javascript.png"
+  },
+  {
+    "title": "Node.js",
+    "imageSrc": "assets/skills/nodejs.png"
+  },
+  {
+    "title": "SQL",
+    "imageSrc": "assets/skills/sql.png"
+  },
+  {
+    "title": "MongoDB",
+    "imageSrc": "assets/skills/mongodb.png"
+  },
   {
     "title": "HTML",
     "imageSrc": "assets/skills/html.png"
@@ -11,18 +40,7 @@
     "title": "React",
     "imageSrc": "assets/skills/react.png"
   },
-  {
-    "title": "Node",
-    "imageSrc": "assets/skills/node.png"
-  },
-  {
-    "title": "GraphQL",
-    "imageSrc": "assets/skills/graphql.png"
-  },
-  {
-    "title": "MongoDB",
-    "imageSrc": "assets/skills/mongodb.png"
-  },
+  
   {
     "title": "Figma",
     "imageSrc": "assets/skills/figma.png"
