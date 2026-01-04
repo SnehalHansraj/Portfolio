@@ -31,7 +31,7 @@ export const skillsText = {
       ],
     },
     {
-      title: "Machine Learning (Basic)",
+      title: "Machine Learning",
       items: [
         "Scikit-learn",
         "Model Evaluation",
@@ -54,15 +54,15 @@ export const skillsText = {
   de: [
     {
       title: "Programmiersprachen",
-      items: ["Python", "Java", "JavaScript"],
+      items: ["Python", "C++", "C#", "JavaScript"],
     },
     {
       title: "Webtechnologien",
-      items: ["HTML", "CSS", "React"],
+      items: ["HTML5", "CSS3", "React"],
     },
     {
       title: "Backend & APIs",
-      items: ["REST APIs", "Node.js", "Express"],
+      items: ["REST APIs"],
     },
     {
       title: "Datenbanken",
@@ -73,16 +73,12 @@ export const skillsText = {
       items: ["Pandas", "NumPy", "Datenvisualisierung"],
     },
     {
-      title: "Machine Learning (Grundkenntnisse)",
+      title: "Machine Learning)",
       items: ["Scikit-learn"],
     },
     {
       title: "Tools & Plattformen",
       items: ["Git", "GitHub", "VS Code"],
-    },
-    {
-      title: "Softwareentwicklung",
-      items: ["OOP", "Agile Grundlagen", "Clean Code"],
     },
     {
       title: "Sprachen",

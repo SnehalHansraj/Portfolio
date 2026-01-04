@@ -4,7 +4,7 @@ export const skillsData = {
       title: "Programming Languages",
       shortTitle: "Programming Lang.",
       icon: "Code",
-      skills: ["Python", "JavaScript", "C#", "Java"],
+      skills: ["Python", "JavaScript", "C#", "C++"],
     },
     {
       title: "Frontend / Web Development",
@@ -22,7 +22,7 @@ export const skillsData = {
       title: "Databases",
       shortTitle: "Databases",
       icon: "Database",
-      skills: ["PostgreSQL", "MySQL", "Microsoft SQL Server", "MongoDB"],
+      skills: [ "MySQL", "Microsoft SQL Server", "MongoDB"],
     },
     {
       title: "Machine Learning & Data",
@@ -65,7 +65,7 @@ export const skillsData = {
       title: "Programmiersprachen",
       shortTitle: "Programmiersp.",
       icon: "Code",
-      skills: ["Python", "JavaScript", "C#", "Java"],
+      skills: ["Python", "JavaScript", "C#", "C++"],
     },
     {
       title: "Frontend / Webentwicklung",
@@ -83,7 +83,7 @@ export const skillsData = {
       title: "Datenbanken",
       shortTitle: "Datenbanken",
       icon: "Database",
-      skills: ["PostgreSQL", "MySQL", "MS SQL Server", "MongoDB"],
+      skills: ["MySQL", "Microsoft SQL Server", "MongoDB"],
     },
     {
       title: "Machine Learning & Datenanalyse",
