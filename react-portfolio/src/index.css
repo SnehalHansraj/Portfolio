@@ -12,3 +12,21 @@ body {
   font-size: 16px;
   letter-spacing: 0.1px;
 }
+
+section {
+  position: relative;
+}
+
+section::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 1px;
+  margin: 100px auto 0;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--card-border),
+    transparent
+  );
+}

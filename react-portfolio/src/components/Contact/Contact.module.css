@@ -1,64 +1,70 @@
-
-
 .container {
-  color: var(--text);
   margin-top: 120px;
-  background-color: var(--secondary);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  width: 100vw;
-  padding: 58px 10%;
-  gap: 10px;
+  padding: 80px 10%;
+  background: linear-gradient(
+    135deg,
+    var(--accent-bg),
+    transparent 70%
+  );
 }
 
-.text h2 {
-  font-size: 80px;
-  font-weight: 700;
-  letter-spacing: 4px;
+.title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  text-align: center;
 }
 
-.text p {
-  font-size: 40px;
-  font-weight: 400;
-  letter-spacing: 2px;
+/* FULL-WIDTH CARD */
+.list {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;              /* 🔥 vertical centering */
+  gap: 40px;
+
+  background: var(--card-bg);
+  padding: 48px 56px;
+  border-radius: 24px;
+
+  box-shadow: 0 16px 36px var(--card-shadow);
 }
 
-.links {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  list-style: none;
-  gap: 26px;
-}
-
-.link {
+/* EACH ITEM */
+.item {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 16px;
+
+  font-size: 16px;
+  color: var(--text);
 }
 
-.link a {
+.item svg {
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.item a {
   color: var(--text);
   text-decoration: none;
-  font-size: 30px;
-  font-weight: 400;
-  letter-spacing: 1.5px;
 }
 
-@media screen and (max-width: 830px) {
+.item a:hover {
+  text-decoration: underline;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
   .container {
-    flex-direction: column;
-    gap: 23px;
+    padding: 60px 6%;
   }
 
-  .text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .links {
-    align-items: center;
+  .list {
+    grid-template-columns: 1fr;
+    padding: 32px;
+    gap: 24px;
   }
 }

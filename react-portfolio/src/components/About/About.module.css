@@ -1,86 +1,75 @@
 .container {
-  margin: 120px 10% 0;
-  max-width: 900px;
+  margin: 100px 10% 0;
+  max-width: 1100px;
 }
 
 .title {
   font-size: 32px;
   font-weight: 600;
   margin-bottom: 24px;
-  color: var(--text);
 }
 
 .summary {
   font-size: 16px;
-  line-height: 1.7;
+  line-height: 1.75;
   color: var(--muted-text);
-  margin-bottom: 40px;
+  max-width: 850px;
+  margin-bottom: 16px;
 }
-
-/* EDUCATION CARD */
 .educationCard {
-  background-color: var(--surface);
-  border: 1px solid var(--secondary);
-  border-radius: 10px;
-  padding: 24px;
+  margin-top: 48px;
 }
 
 .educationCard h3 {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 600;
-  margin-bottom: 20px;
-  color: var(--text);
+  margin-bottom: 24px;
+}
+
+/* GRID FOR 2 CARDS */
+.educationGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
 }
 
 .educationItem {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
-  margin-bottom: 16px;
+  gap: 16px;
+  padding: 24px;
+  background: var(--card-bg);
+  border-radius: 18px;
+  box-shadow: 0 10px 24px var(--card-shadow);
+}
+
+.eduIcon {
+  color: var(--primary);
+  margin-top: 4px;
 }
 
 .degree {
   font-size: 16px;
-  font-weight: 500;
-  color: var(--text);
+  font-weight: 600;
+  display: block;
 }
 
 .university {
   font-size: 15px;
-  color: var(--muted-text);
-}
-
-.duration {
-  font-size: 14px;
   color: var(--accent);
+  display: block;
 }
 
+.duration,
 .marks {
   font-size: 14px;
   color: var(--muted-text);
+  display: block;
+  margin-top: 4px;
 }
 
-@media screen and (max-width: 830px) {
-  .container {
-    background-color: transparent;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .content {
-    flex-direction: column;
-  }
-
-  .aboutImage {
-    display: none;
-  }
-
-  .aboutItems {
-    margin-top: 29px;
-  }
-
-  .aboutItem {
-    padding-left: 0;
-    padding-right: 0;
+/* MOBILE */
+@media (max-width: 768px) {
+  .educationGrid {
+    grid-template-columns: 1fr;
   }
 }

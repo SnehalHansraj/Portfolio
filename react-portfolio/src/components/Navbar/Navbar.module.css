@@ -1,13 +1,31 @@
 
 
 .navbar {
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: rgba(247, 247, 245, 0.9); /* light theme */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid var(--card-border);
+}
+
+/* inner wrapper — THIS FIXES LEFT SHIFT */
+.navbarContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 10%;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 61px;
-  z-index: 2;
-  margin: 0 10%;
+}
+
+/* Optional: smooth hover */
+.menuItems a {
+  transition: color 0.2s ease;
 }
 
 .title {

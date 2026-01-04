@@ -81,6 +81,54 @@
   color: var(--text);
 }
 
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 14px 0 18px;
+  font-size: 14px;
+  color: var(--accent);
+}
+
+.github {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.github:hover {
+  text-decoration: underline;
+}
+
+.filters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.filterBtn {
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  background: var(--surface);
+  border: 1px solid var(--card-border);
+  cursor: pointer;
+  color: var(--text);
+}
+
+.filterBtn:hover {
+  background: var(--accent-bg);
+}
+
+.active {
+  background: var(--primary);
+  color: #000;
+}
+
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .container {

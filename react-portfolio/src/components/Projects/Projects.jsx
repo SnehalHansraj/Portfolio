@@ -1,8 +1,16 @@
+import { useState } from "react";
 import styles from "./Projects.module.css";
 import { projectsData } from "../../data/projectsData";
+import { Github } from "lucide-react";
 
 export default function Projects({ language = "en" }) {
   const projects = projectsData[language];
+  const [filter, setFilter] = useState("all");
+
+  const filteredProjects =
+    filter === "all"
+      ? projects
+      : projects.filter((p) => p.category === filter);
 
   return (
     <section className={styles.container} id="projects">
@@ -10,8 +18,28 @@ export default function Projects({ language = "en" }) {
         {language === "de" ? "Projekte" : "Projects"}
       </h2>
 
+      {/* FILTER */}
+      <div className={styles.filters}>
+        {[
+          { key: "all", label: "All" },
+          { key: "frontend", label: "Frontend" },
+          { key: "ml", label: "Machine Learning" },
+          { key: "genai", label: "GenAI" },
+        ].map((btn) => (
+          <button
+            key={btn.key}
+            className={`${styles.filterBtn} ${
+              filter === btn.key ? styles.active : ""
+            }`}
+            onClick={() => setFilter(btn.key)}
+          >
+            {btn.label}
+          </button>
+        ))}
+      </div>
+
       <div className={styles.grid}>
-        {projects.map((project, index) => (
+        {filteredProjects.map((project, index) => (
           <article key={index} className={styles.card}>
             <header className={styles.header}>
               <h3>{project.title}</h3>
@@ -23,6 +51,18 @@ export default function Projects({ language = "en" }) {
                 <strong>{language === "de" ? "Rolle:" : "Role:"}</strong>{" "}
                 {project.role}
               </span>
+
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.github}
+                >
+                  <Github size={18} />
+                  GitHub
+                </a>
+              )}
             </div>
 
             <ul className={styles.points}>

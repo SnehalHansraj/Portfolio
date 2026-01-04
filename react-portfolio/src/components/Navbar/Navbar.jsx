@@ -15,10 +15,14 @@ export const Navbar = () => {
   const t = navbarText[language];
 
   return (
-    <nav className={styles.navbar}>
+  <nav className={styles.navbar}>
+    <div className={styles.navbarContent}>
+      {/* LEFT: TITLE */}
       <a className={styles.title} href="/">
         Portfolio
       </a>
+
+      {/* CENTER: MENU */}
       <div className={styles.menu}>
         <img
           className={styles.menuBtn}
@@ -31,31 +35,25 @@ export const Navbar = () => {
           onClick={() => setMenuOpen(!menuOpen)}
         />
         <ul
-          className={`${styles.menuItems} ${menuOpen && styles.menuOpen}`}
+          className={`${styles.menuItems} ${menuOpen ? styles.menuOpen : ""}`}
           onClick={() => setMenuOpen(false)}
         >
-          <li>
-            <a href="#about">{t.about}</a>
-          </li>
-          <li>
-            <a href="#experience">{t.experience}</a>
-          </li>
-          <li>
-            <a href="#projects">{t.projects}</a>
-          </li>
-          <li>
-            <a href="#contact">{t.contact}</a>
-          </li>
+          <li><a href="#about">{t.about}</a></li>
+          <li><a href="#experience">{t.experience}</a></li>
+          <li><a href="#projects">{t.projects}</a></li>
+          <li><a href="#contact">{t.contact}</a></li>
         </ul>
       </div>
 
+      {/* RIGHT: CONTROLS */}
       <div className={styles.controls}>
         <button onClick={toggleTheme}>🌓</button>
         <button onClick={toggleLanguage}>
           {language === "en" ? "DE" : "EN"}
         </button>
       </div>
-    </nav>
-    
-  );
+    </div>
+  </nav>
+);
+
 };
