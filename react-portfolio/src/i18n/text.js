@@ -34,11 +34,9 @@ export const aboutText = {
     title: "About Me",
     summary:
       "I am currently pursuing my Master’s degree in Computer Science at RPTU Kaiserslautern, Germany. I have over 2 years of professional experience as a Software Engineer at Persistent Systems, where I worked on backend development, APIs, and software optimization." +
-      " I am interested in software development, data analytics, and building practical solutions for real-world problems.",
+      " ",
     summary2:
-      "I am currently looking for a Working Student (Werkstudent) position in Germany." +
-      "Software Engineer with 2+ years of professional experience in backend and full-stack development. Currently pursuing a Master’s degree in Computer Science at RPTU Kaiserslautern, with a strong focus on scalable systems, clean architecture, and applied software engineering.",
-    // alternative longer summary
+      "I am interested in software development, data analytics, and building practical solutions for real-world problems. I am currently looking for a Working Student (Werkstudent) position in Germany.",
     education: "Education",
     degrees: [
       {

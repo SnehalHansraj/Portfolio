@@ -47,12 +47,12 @@ export const Hero = () => {
           </a>
         </div>
       </div>
-
-      <img
-        src="assets/hero/SnehalHansrajPhoto.png"
+      <div className={styles.imageWrapper}>
+        <img src="assets/hero/SnehalHansrajPhoto.png" 
         alt="Snehal Hansraj"
-        className={styles.heroImg}
-      />
+        className={styles.heroImg} />
+      </div>
+      
 
       <div className={styles.topBlur} />
       <div className={styles.bottomBlur} />

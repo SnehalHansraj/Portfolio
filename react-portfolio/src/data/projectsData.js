@@ -5,7 +5,7 @@ export const projectsData = {
       subtitle: "Personal portfolio built with React",
       role: "Frontend Developer",
       category: "frontend",
-      tech: ["React", "CSS Modules", "Responsive Design"],
+      tech: ["React", "CSS Modules", "Responsive Design", "JavaScript"],
       github: "https://github.com/SnehalHansraj/portfolio",
       demo: null,
       points: [

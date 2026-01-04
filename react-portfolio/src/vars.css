@@ -1,6 +1,6 @@
 :root {
   --font-primary: "Inter", system-ui, -apple-system, sans-serif;
-
+  --navbar-bg: rgba(255,255,255, 0.75);
   /* base spacing & radius */
   --radius: 8px;
 }
@@ -21,6 +21,8 @@
   --card-hover: var(--primary);
   --card-shadow: rgba(0, 0, 0, 0.1);
   --accent-bg: rgba(191, 161, 129, 0.08);
+  --navbar-bg: rgba(247, 247, 245, 0.85);
+
 }
 
 /* ========= DARK THEME (Elegant, Not Neon) ========= */
@@ -40,6 +42,8 @@
   --card-hover: var(--primary); 
   --card-shadow: rgba(191, 195, 208, 0.5);
   --accent-bg: transparent;
+  --navbar-bg: rgba(28, 28, 28, 0.85);
+  
 }
 
 /* smooth transition */

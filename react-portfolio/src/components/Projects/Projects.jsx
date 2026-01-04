@@ -2,8 +2,10 @@ import { useState } from "react";
 import styles from "./Projects.module.css";
 import { projectsData } from "../../data/projectsData";
 import { Github } from "lucide-react";
+import { useLanguage } from "../../context/LanguageContext";
 
-export default function Projects({ language = "en" }) {
+export default function Projects() {
+  const { language } = useLanguage(); // 🔥 FIX
   const projects = projectsData[language];
   const [filter, setFilter] = useState("all");
 
@@ -21,10 +23,22 @@ export default function Projects({ language = "en" }) {
       {/* FILTER */}
       <div className={styles.filters}>
         {[
-          { key: "all", label: "All" },
-          { key: "frontend", label: "Frontend" },
-          { key: "ml", label: "Machine Learning" },
-          { key: "genai", label: "GenAI" },
+          {
+            key: "all",
+            label: language === "de" ? "Alle" : "All",
+          },
+          {
+            key: "frontend",
+            label: "Frontend",
+          },
+          {
+            key: "ml",
+            label: language === "de" ? "Maschinelles Lernen" : "Machine Learning",
+          },
+          {
+            key: "genai",
+            label: "GenAI",
+          },
         ].map((btn) => (
           <button
             key={btn.key}

@@ -4,7 +4,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 80px 120px;
+  gap: 80px;
+  padding: 80px 8%;
   position: relative;
   font-family: "Inter", sans-serif;
 }
@@ -28,7 +29,7 @@
 
 
 .subtitle {
-  font-size: 25px;
+  font-size: 23px;
   font-weight: 600;
   color: var(--muted-text); 
   margin-bottom: 20px;
@@ -71,8 +72,8 @@
 
 .heroImg{
     /*width: 39%;*/
-    width: 360px;
-    height: 360px;
+    width: 370px;
+    height: 370x;
     z-index: 1;
     animation-name: floating;
     animation-duration: 3s;
@@ -86,6 +87,11 @@
     100% { transform: translate(0, -0px); }
 }
 
+.imageWrapper {
+  margin-left: auto;   /*  THIS FORCES IMAGE TO RIGHT */
+  display: flex;
+  justify-content: center;
+}
 
 /* Background blur stays but softer */
 .topBlur,
@@ -112,6 +118,11 @@
   right: -150px;
 }
 
+/* Disable global section separator for hero */
+.container::after {
+  display: none !important;
+}
+
 /* Responsive styles */
 
 @media screen and (max-width: 900px) {
@@ -132,6 +143,7 @@
   .heroImg {
     width: 260px;
     height: 260px;
+    align-items: center;
     margin-bottom: 32px;
   }
 }
