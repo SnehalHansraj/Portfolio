@@ -1,53 +1,66 @@
-import React from "react";
-
 import styles from "./Experience.module.css";
-import skills from "../../data/skills.json";
-import history from "../../data/history.json";
-import { getImageUrl } from "../../utils";
 import { useLanguage } from "../../context/LanguageContext";
-import { experienceText } from "../../i18n/text";
+import { skillsData } from "../../data/skillsData";
+import { experienceData } from "../../data/experienceData";
+import * as Icons from "lucide-react";
 
 export const Experience = () => {
   const { language } = useLanguage();
-  const t = experienceText[language];
+
+  const skills = skillsData[language];
+  const experience = experienceData[language];
 
   return (
     <section className={styles.container} id="experience">
-      <h2 className={styles.title}>{t.title}</h2>
-      <div className={styles.content}>
-        <div className={styles.skills}>
-          {skills.map((skill, id) => {
-            return (
-              <div key={id} className={styles.skill}>
-                <div className={styles.skillImageContainer}>
-                  <img src={(skill.imageSrc)} alt={skill.title} />
-                </div>
-                <p>{skill.title}</p>
+      <h2 className={styles.title}>Experience</h2>
+
+      <div className={styles.layout}>
+        {/* LEFT COLUMN — SKILLS */}
+        <div className={styles.skillsColumn}>
+          {skills.map((item, index) => {
+          const Icon = Icons[item.icon];
+
+          return (
+            <div key={index} className={styles.skillCard}>
+              <div className={styles.skillHeader}>
+                <Icon size={22} className={styles.icon} />
+                <span className={styles.skillTitle}>
+                  {item.shortTitle}
+                </span>
               </div>
-            );
+              <div className={styles.skillContent}>
+                <h4>{item.title}</h4>
+                <ul>
+                  {item.skills.map((skill, i) => (
+                  <li key={i}>{skill}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+             );
           })}
         </div>
-        <ul className={styles.history}>
-          {history.map((historyItem, id) => {
-            return (
-              <li key={id} className={styles.historyItem}>
-                <img
-                  src={historyItem.imageSrc}
-                  alt={`${historyItem.organisation} Logo`}
-                />
-                <div className={styles.historyItemDetails}>
-                  <h3>{`${historyItem.role}, ${historyItem.organisation}`}</h3>
-                  <p>{`${historyItem.startDate} - ${historyItem.endDate}`}</p>
-                  <ul>
-                    {historyItem.experiences.map((experience, id) => {
-                      return <li key={id}>{experience}</li>;
-                    })}
-                  </ul>
-                </div>
-              </li>
-            );
-          })}
-        </ul>
+
+        {/* RIGHT COLUMN — EXPERIENCE */}
+        <div className={styles.experienceColumn}>
+          {experience.map((job, index) => (
+            <div key={index} className={styles.experienceCard}>
+              <h3>
+                {job.role} – {job.company}
+              </h3>
+
+              <span className={styles.meta}>
+                {job.location} | {job.duration}
+              </span>
+
+              <ul>
+                {job.points.map((point, i) => (
+                  <li key={i}>{point}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

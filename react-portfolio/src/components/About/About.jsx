@@ -25,6 +25,7 @@ export const About = () => {
             <span className={styles.degree}>{item.degree}</span>
             <span className={styles.university}>{item.university}</span>
             <span className={styles.duration}>{item.duration}</span>
+            <span className={styles.marks}>{item.marks}</span>
           </div>
         ))}
       </div>
