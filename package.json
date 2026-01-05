@@ -3,14 +3,11 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://snehalhansraj.github.io/Portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint .",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist --no-history"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@fontsource/outfit": "^5.2.8",
