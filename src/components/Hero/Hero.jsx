@@ -48,7 +48,7 @@ export const Hero = () => {
         </div>
       </div>
       <div className={styles.imageWrapper}>
-        <img src="assets/hero/SnehalHansrajPhoto.png" 
+        <img src="/Portfolio/hero/SnehalHansrajPhoto.png" 
         alt="Snehal Hansraj"
         className={styles.heroImg} />
       </div>
