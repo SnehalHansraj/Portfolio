@@ -39,8 +39,8 @@ export const Hero = () => {
           <a 
             href={ 
               language === "en"
-              ? "/CV_Snehal_Hansraj.pdf"
-              : "/CV_Snehal_Hansraj_DE.pdf"
+              ? "/Portfolio/CV_Snehal_Hansraj.pdf"
+              : "/Portfolio/CV_Snehal_Hansraj_DE.pdf"
              }
             className={styles.secondaryBtn} 
             download
