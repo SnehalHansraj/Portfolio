@@ -2,17 +2,20 @@ import styles from "./Experience.module.css";
 import { useLanguage } from "../../context/LanguageContext";
 import { skillsData } from "../../data/skillsData";
 import { experienceData } from "../../data/experienceData";
+import { experienceText } from "../../i18n/text";
 import * as Icons from "lucide-react";
 
 export const Experience = () => {
   const { language } = useLanguage();
+  const t = experienceText[language];
+
 
   const skills = skillsData[language];
   const experience = experienceData[language];
 
   return (
     <section className={styles.container} id="experience">
-      <h2 className={styles.title}>Experience</h2>
+      <h2 className={styles.title}>{t.title}</h2>
 
       <div className={styles.layout}>
         {/* LEFT COLUMN — SKILLS */}

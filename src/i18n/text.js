@@ -1,3 +1,5 @@
+import { GitBranch } from "lucide-react";
+
 export const navbarText = {
   en: {
     about: "About",
@@ -83,3 +85,27 @@ export const experienceText = {
     title: "Berufserfahrung",
   },
 };
+
+export const contactText = {
+  en: {
+    title: "Contact",
+    email: "Email",
+    phone: "Phone",
+    location: "Location",
+    linkedin: "LinkedIn",
+    github: "GitHub",
+  },
+  de: {
+    title: "Kontakt",
+    email: "E-Mail",
+    phone: "Telefon",
+    location: "Ort",
+    linkedin: "LinkedIn",
+    github: "GitHub",
+  },
+};
+
+export const contactBtn ={
+  en: "Contact Me",
+  de: "Kontakt aufnehmen",
+}

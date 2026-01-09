@@ -2,10 +2,12 @@ import React from "react";
 import styles from "./Hero.module.css";
 import { useLanguage } from "../../context/LanguageContext";
 import { heroText } from "../../i18n/text";
+import { contactBtn } from "../../i18n/text";
 
 export const Hero = () => {
   const { language } = useLanguage();
   const text = heroText[language];
+  const t = contactBtn[language];
 
   return (
     <section className={styles.container}>
@@ -31,7 +33,7 @@ export const Hero = () => {
         {/* BUTTON WRAPPER */}
         <div className={styles.buttons}>
           <a href="mailto:snehal31deore@gmail.com" className={styles.contactBtn}>
-            Contact Me
+            {t}
           </a>
 
           <a 

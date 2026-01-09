@@ -1,12 +1,15 @@
 import styles from "./Contact.module.css";
-import { Mail, Phone, Linkedin, MapPin } from "lucide-react";
+import { contactText } from "../../i18n/text";
+import { Mail, Phone, Linkedin, MapPin, Github } from "lucide-react";
+import { useLanguage } from "../../context/LanguageContext";
 
-export default function Contact({ language = "en" }) {
+export default function Contact() {
+  const { language } = useLanguage();
+  const t = contactText[language];
+
   return (
     <section className={styles.container} id="contact">
-      <h2 className={styles.title}>
-        {language === "de" ? "Kontakt" : "Contact"}
-      </h2>
+      <h2 className={styles.title}>{t.title}</h2>
 
       <div className={styles.list}>
         <div className={styles.item}>
@@ -38,6 +41,17 @@ export default function Contact({ language = "en" }) {
             rel="noopener noreferrer"
           >
             linkedin.com/in/snehaldeore31
+          </a>
+        </div>
+
+        <div className={styles.item}>
+          <Github size={18} />
+          <a
+            href="https://github.com/snehalhansraj"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            github.com/snehalhansraj
           </a>
         </div>
       </div>
