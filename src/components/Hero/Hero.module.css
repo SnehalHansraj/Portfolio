@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 80px;
-  padding: 80px 8%;
+  padding: 120px 120px 80px;
   position: relative;
   font-family: "Inter", sans-serif;
 }
@@ -88,9 +88,11 @@
 }
 
 .imageWrapper {
+  flex-shrink: 0;
   margin-left: auto;   /*  THIS FORCES IMAGE TO RIGHT */
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 /* Background blur stays but softer */
@@ -128,12 +130,20 @@
 @media screen and (max-width: 900px) {
   .container {
     flex-direction: column-reverse;
+    padding: 100px 24px 60px;
+    gap: 32 px;
     text-align: center;
-    padding: 60px 24px;
+  }
+
+  .imageWrapper {
+    margin-left: 0;          /* remove right-push */
+    justify-content: center; /* center horizontally */
+    width: 100%;
   }
 
   .content {
-    align-items: center;
+     
+    max-width: 100%;
   }
 
   .buttons {
@@ -141,9 +151,8 @@
   }
 
   .heroImg {
-    width: 260px;
-    height: 260px;
-    align-items: center;
-    margin-bottom: 32px;
+    width: 280px;
+    height: 280px;
+    margin: 0 auto;
   }
 }
